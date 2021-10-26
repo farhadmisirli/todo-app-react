@@ -10,14 +10,11 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
-
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-
-
 
 class Content extends Component {
     constructor(props) {
@@ -44,7 +41,6 @@ class Content extends Component {
         }
     }
 
-
     editSelectedTask = (e) => {
         if(e.key === 'Enter'){
             let new_task = e.target.value.trim();
@@ -59,7 +55,6 @@ class Content extends Component {
         }
     }
     
-
     deleteItem = (index) => {
         let tasks = this.state.tasks;
         tasks.splice(index, 1);
@@ -69,14 +64,11 @@ class Content extends Component {
     editItem = (index) => {
         let selected_task = this.state.tasks[index];
         this.setState({'tasks': this.state.tasks, open: true, edit_text: selected_task, edit_task_index:index});
-        
     }
-
 
     closeModal = () => {
         this.setState({'tasks': this.state.tasks, open: false, edit_text: "", edit_task_index: null});
     };
-
 
     render() {
         return <>
@@ -113,13 +105,11 @@ class Content extends Component {
                             </ListItemIcon>
                             <ListItemText id={labelId} primary={task} />
                         </ListItemButton>
-
-
+                        
                     </ListItem>
                     );
                 })}
             </List>
-
 
             {/* Modal */}
             <Dialog open={this.state.open} onClose={() => this.closeModal()}>

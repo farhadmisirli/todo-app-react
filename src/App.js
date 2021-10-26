@@ -5,6 +5,7 @@ import {Container} from '@mui/material';
 // import components
 import Header from './layouts/Header';
 import Content from './layouts/Content';
+import Test from './layouts/Test';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         
         <Header />
 
-        <Content />
+        <Test />
 
         </Container>
         
